@@ -160,33 +160,33 @@ function UserPromptModal(props: { onClose?: () => void }) {
                   </div>
                 </div>
 
-                <div className={styles["user-prompt-buttons"]}>
-                  {v.isUser && (
-                    <IconButton
-                      icon={<ClearIcon />}
-                      className={styles["user-prompt-button"]}
-                      onClick={() => promptStore.remove(v.id!)}
-                    />
-                  )}
-                  {v.isUser ? (
-                    <IconButton
-                      icon={<EditIcon />}
-                      className={styles["user-prompt-button"]}
-                      onClick={() => setEditingPromptId(v.id)}
-                    />
-                  ) : (
-                    <IconButton
-                      icon={<EyeIcon />}
-                      className={styles["user-prompt-button"]}
-                      onClick={() => setEditingPromptId(v.id)}
-                    />
-                  )}
-                  <IconButton
-                    icon={<CopyIcon />}
-                    className={styles["user-prompt-button"]}
-                    onClick={() => copyToClipboard(v.content)}
-                  />
-                </div>
+                // <div className={styles["user-prompt-buttons"]}>
+                //   {v.isUser && (
+                //     <IconButton
+                //       icon={<ClearIcon />}
+                {/*      className={styles["user-prompt-button"]}*/}
+                {/*      onClick={() => promptStore.remove(v.id!)}*/}
+                {/*    />*/}
+                {/*  )}*/}
+                {/*  {v.isUser ? (*/}
+                {/*    <IconButton*/}
+                {/*      icon={<EditIcon />}*/}
+                {/*      className={styles["user-prompt-button"]}*/}
+                {/*      onClick={() => setEditingPromptId(v.id)}*/}
+                {/*    />*/}
+                //   ) : (
+                //     <IconButton
+                //       icon={<EyeIcon />}
+                //       className={styles["user-prompt-button"]}
+                {/*      onClick={() => setEditingPromptId(v.id)}*/}
+                {/*    />*/}
+                {/*  )}*/}
+                {/*  <IconButton*/}
+                {/*    icon={<CopyIcon />}*/}
+                {/*    className={styles["user-prompt-button"]}*/}
+                {/*    onClick={() => copyToClipboard(v.content)}*/}
+                {/*  />*/}
+                {/*</div>*/}
               </div>
             ))}
           </div>
