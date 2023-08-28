@@ -118,10 +118,10 @@ export function SideBar(props: { className?: string }) {
     >
       <div className={styles["sidebar-header"]} data-tauri-drag-region>
         <div className={styles["sidebar-title"]} data-tauri-drag-region>
-          ChatGPT Next
+          ChatGPT
         </div>
         <div className={styles["sidebar-sub-title"]}>
-          Build your own AI assistant.
+          Artificial intelligence from Liu Zhen.
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
@@ -155,7 +155,7 @@ export function SideBar(props: { className?: string }) {
       >
         <ChatList narrow={shouldNarrow} />
       </div>
-
+      {/*左侧栏下方三个图标*/}
       <div className={styles["sidebar-tail"]}>
         <div className={styles["sidebar-actions"]}>
           <div className={styles["sidebar-action"] + " " + styles.mobile}>
@@ -173,11 +173,11 @@ export function SideBar(props: { className?: string }) {
               <IconButton icon={<SettingsIcon />} shadow />
             </Link>
           </div>
-          <div className={styles["sidebar-action"]}>
-            <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
-              <IconButton icon={<GithubIcon />} shadow />
-            </a>
-          </div>
+          {/*<div className={styles["sidebar-action"]}>*/}
+          {/*  <a href={REPO_URL} target="_blank" rel="noopener noreferrer">*/}
+          {/*    <IconButton icon={<GithubIcon />} shadow />*/}
+          {/*  </a>*/}
+          {/*</div>*/}
         </div>
         <div>
           <IconButton
