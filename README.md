@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
 <img src="./docs/images/icon.svg" alt="icon"/>
 
@@ -317,3 +318,6 @@ If you want to add a new translation, read this [document](./docs/translation.md
 ## LICENSE
 
 [MIT](https://opensource.org/license/mit/)
+=======
+# NewWeb_01
+>>>>>>> 33bb8f330f52c623d5fdcfd038d38b0b6e5724bf
