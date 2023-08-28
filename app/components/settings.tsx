@@ -434,31 +434,31 @@ export function Settings() {
               </div>
             </Popover>
           </ListItem>
-
-          <ListItem
-            title={Locale.Settings.Update.Version(currentVersion ?? "unknown")}
-            subTitle={
-              checkingUpdate
-                ? Locale.Settings.Update.IsChecking
-                : hasNewVersion
-                ? Locale.Settings.Update.FoundUpdate(remoteId ?? "ERROR")
-                : Locale.Settings.Update.IsLatest
-            }
-          >
-            {checkingUpdate ? (
-              <LoadingIcon />
-            ) : hasNewVersion ? (
-              <Link href={updateUrl} target="_blank" className="link">
-                {Locale.Settings.Update.GoToUpdate}
-              </Link>
-            ) : (
-              <IconButton
-                icon={<ResetIcon></ResetIcon>}
-                text={Locale.Settings.Update.CheckUpdate}
-                onClick={() => checkUpdate(true)}
-              />
-            )}
-          </ListItem>
+          {/*更新模块*/}
+          {/*<ListItem*/}
+          {/*  title={Locale.Settings.Update.Version(currentVersion ?? "unknown")}*/}
+          {/*  subTitle={*/}
+          {/*    checkingUpdate*/}
+          {/*      ? Locale.Settings.Update.IsChecking*/}
+          {/*      : hasNewVersion*/}
+          {/*      ? Locale.Settings.Update.FoundUpdate(remoteId ?? "ERROR")*/}
+          {/*      : Locale.Settings.Update.IsLatest*/}
+          {/*  }*/}
+          {/*>*/}
+          {/*  {checkingUpdate ? (*/}
+          {/*    <LoadingIcon />*/}
+          {/*  ) : hasNewVersion ? (*/}
+          {/*    <Link href={updateUrl} target="_blank" className="link">*/}
+          {/*      {Locale.Settings.Update.GoToUpdate}*/}
+          {/*    </Link>*/}
+          {/*  ) : (*/}
+          {/*    <IconButton*/}
+          {/*      icon={<ResetIcon></ResetIcon>}*/}
+          {/*      text={Locale.Settings.Update.CheckUpdate}*/}
+          {/*      onClick={() => checkUpdate(true)}*/}
+          {/*    />*/}
+          {/*  )}*/}
+          {/*</ListItem>*/}
 
           <ListItem title={Locale.Settings.SendKey}>
             <Select
@@ -494,21 +494,21 @@ export function Settings() {
               ))}
             </Select>
           </ListItem>
-
-          <ListItem title={Locale.Settings.Lang.Name}>
-            <Select
-              value={getLang()}
-              onChange={(e) => {
-                changeLang(e.target.value as any);
-              }}
-            >
-              {AllLangs.map((lang) => (
-                <option value={lang} key={lang}>
-                  {ALL_LANG_OPTIONS[lang]}
-                </option>
-              ))}
-            </Select>
-          </ListItem>
+          {/*语言模块*/}
+          {/*<ListItem title={Locale.Settings.Lang.Name}>*/}
+          {/*  <Select*/}
+          {/*    value={getLang()}*/}
+          {/*    onChange={(e) => {*/}
+          {/*      changeLang(e.target.value as any);*/}
+          {/*    }}*/}
+          {/*  >*/}
+          {/*    {AllLangs.map((lang) => (*/}
+          {/*      <option value={lang} key={lang}>*/}
+          {/*        {ALL_LANG_OPTIONS[lang]}*/}
+          {/*      </option>*/}
+          {/*    ))}*/}
+          {/*  </Select>*/}
+          {/*</ListItem>*/}
 
           <ListItem
             title={Locale.Settings.FontSize.Title}
@@ -704,22 +704,22 @@ export function Settings() {
               )}
             </ListItem>
           ) : null}
-
-          <ListItem
-            title={Locale.Settings.CustomModel.Title}
-            subTitle={Locale.Settings.CustomModel.SubTitle}
-          >
-            <input
-              type="text"
-              value={config.customModels}
-              placeholder="model1,model2,model3"
-              onChange={(e) =>
-                config.update(
-                  (config) => (config.customModels = e.currentTarget.value),
-                )
-              }
-            ></input>
-          </ListItem>
+          {/*/!*模型自定义*!/*/}
+          {/*<ListItem*/}
+          {/*  title={Locale.Settings.CustomModel.Title}*/}
+          {/*  subTitle={Locale.Settings.CustomModel.SubTitle}*/}
+          {/*>*/}
+          {/*  <input*/}
+          {/*    type="text"*/}
+          {/*    value={config.customModels}*/}
+          {/*    placeholder="model1,model2,model3"*/}
+          {/*    onChange={(e) =>*/}
+          {/*      config.update(*/}
+          {/*        (config) => (config.customModels = e.currentTarget.value),*/}
+          {/*      )*/}
+          {/*    }*/}
+          {/*  ></input>*/}
+          {/*</ListItem>*/}
         </List>
 
         <SyncItems />
