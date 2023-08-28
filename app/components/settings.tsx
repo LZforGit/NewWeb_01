@@ -161,13 +161,13 @@ function UserPromptModal(props: { onClose?: () => void }) {
                 </div>
 
                 <div className={styles["user-prompt-buttons"]}>
-                  {/*{v.isUser && (*/}
-                  {/*  <IconButton*/}
-                  {/*    icon={<ClearIcon />}*/}
-                  {/*    className={styles["user-prompt-button"]}*/}
-                  {/*    onClick={() => promptStore.remove(v.id!)}*/}
-                  {/*  />*/}
-                  {/*)}*/}
+                  {v.isUser && (
+                    <IconButton
+                      icon={<ClearIcon />}
+                      className={styles["user-prompt-button"]}
+                      onClick={() => promptStore.remove(v.id!)}
+                    />
+                  )}
                   {v.isUser ? (
                     <IconButton
                       icon={<EditIcon />}
